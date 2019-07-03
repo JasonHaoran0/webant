@@ -1,0 +1,19 @@
+# gitignore
+# Eclipse:
+\.settings
+
+# Java:
+\target
+.project
+.classpath
+
+# Idea
+\classes
+.idea/
+out/
+*.iml
+
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini

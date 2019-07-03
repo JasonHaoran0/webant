@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 基本设置 The Basics -->
+    <groupId>koro.web</groupId>
+    <artifactId>webant</artifactId>
+    <!--父工程打包方式处要设置为 pom。-->
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <!--定义属性-->
+    <properties>
+    </properties>
+    <!--在总的聚合工程中使用 modules/module 标签组合，指定模块工程的相对路径即可-->
+    <modules>
+        <module>webant-core</module>
+    </modules>
+
+
+    <!-- 项目信息设置 More Project Information -->
+    <name>webant</name>
+    <description>
+        A crawler framework. It covers the whole lifecycle of crawler: downloading, url management, content
+        extraction and persistent. It can simply the development of a specific crawler.
+    </description>
+    <url>https://github.com/</url>
+    <developers>
+        <developer>
+        </developer>
+    </developers>
+
+
+    <!--在父工程中管理依赖，将 Parent 项目中的 dependencies 标签，用 dependencyManagement 标签括起来-->
+    <!--在子项目中重新指定需要的依赖，删除范围和版本号-->
+    <dependencyManagement>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.2</version>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+
+    </dependencies>
+    </dependencyManagement>
+
+</project>
